@@ -1,1 +1,37 @@
-<p>main works!</p>
+<div class="ui text container">
+
+    <h2 class="ui header"><br></h2>
+
+    <div class="ui bottom attached segment">
+        <div class="ui icon input attached one item menu">
+            <input (keyup)="search($event)" type="text" placeholder="Search..." autofocus>
+            <i class="search icon"></i>
+        </div>
+    </div>
+
+    <div class="ui label">
+        list count:
+        <div class="detail">{{displayBookList.length}}</div>
+    </div>
+    <div class="ui section divider"></div>
+
+    <div *ngFor="let i of displayBookList">
+        <div class="ui top attached segment two item menu">
+            <a class="item">{{i.name}}</a>
+            <a class="ui label item">{{i.author}}</a>
+        </div>
+        <div class="ui attached three item menu">
+            <a class="item">{{i.id}}</a>
+            <a class="item">{{i.publisher}}</a>
+            <a class="item">{{i.numberOfPages}}</a>
+        </div>
+        <br>
+    </div>
+
+    <div class="ui section divider"></div>
+    <div class="ui centered grid">
+        deniz suyu - 2020
+    </div>
+    <br>
+
+</div>
